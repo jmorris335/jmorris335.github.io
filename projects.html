@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-2G129M5Q7Y"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-2G129M5Q7Y');
+        </script>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<title>Projects</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="js/app.js"></script>
+    </head>
+    <body>
+
+    <div class="topnav" id="myTopnav">
+        <a class="home" href="/john_morris"> John Morris </a>
+        <div class="menuitems">
+            <a href="/publications.html"> Publications </a>
+            <a href="/research.html"> Research </a>
+            <a href="/teaching.html"> Teaching </a>
+            <a href="/projects.html"> Projects </a>
+            <a href="/cv.html"> CV </a>
+            <a href="/contact.html"> Contact </a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="checkMenuResponsive()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    <main class="content">
+<h1>Past Projects</h1>
+<ul>
+    <h2>Systems Modeling Kernel <a href="https://constrainthg.readthedocs.io/en/latest/">Link</a></h2>
+    <p class="prj">This Python package is used for traversing constraint hypergraphs, allowing systems to be simulated autonomously. The constraint hypergraph represents the system (and all models of it), and ConstraintHg provides pathfinding methods for transforming inputs to outputs. This allows a modeler to treat the model as a pure black box, able to transform any inputs to any desired output, facilitating an immediate interrogative approach to working with system representations. There's lots more information following the link.</p>
+    <img class="prj" src="assets/images/projects/demo.gif" alt="Demonstration of ConstraintHg software for simulating a pendulum.">
+    <img class="prj" src="assets/images/projects/BFSvisualization.gif" alt="Visualization of pathfinding as system simulation.">
+
+    <h2>Digital Twin of a Microgrid <a href="https://github.com/jmorris335/MicrogridHg">Link</a></h2>
+    <p class="prj">The microgrid has been modeled by nearly a dozen modelers since 2016, many in connection with the US Navy and the <a href="https://planner.microgrid.nps.edu">Naval Postgraduate School (NPS).</a> I used constraint hypergraphs to turn it into a declarative, functional model, integrating bits and pieces of models previously written in MATLAB, Python, and MS Excel. The result demonstrated ConstraintHg's ability to represent digital twins.</p>
+    <img class="prj" src="https://github.com/jmorris335/MicrogridHg/blob/4289387eb6b0bc1965528751422b321f03f0e465/media/microgrid.png?raw=true" alt="Overview of Microgrid.">
+    
+    <h2>Digital Twin of a Chop Saw <a href="https://github.com/jmorris335/DT-ChopSaw">Link</a></h2>
+    <p class="prj">This digital twin was eventually retired before being fully implemented, but as it stood it was a full-stack digital twin that took in sensor data from cameras, recorded the configuration of a chop saw using OpenCV modules in a MySQL database, which was accessed by a complex dynamic model that predicted the force input on the saw blade as it cut through a workpiece. This information was outputted to a dashboard hosted on a connected implemented in Dash (with Plotly). It combined both IoT, computer vision, dynamic modeling, and informatics into a single glorious project and directly led to our realization of constraint hypergraphs for representing the state space.</p>
+    <img class="prj" src="assets/images/projects/saw_sim.gif" alt="Simulation of chop saw cutting through X-bar workpiece.">
+
+    <h2>NX Journal for CAD Patterning Estimation <a href="https://github.com/Clemson-PLMC/PatternEstimatorTool">Link</a></h2>
+    <p class="prj">This was a two-night project to make a journal for Siemens NX that estimated the time for a patterning operation to be completed. The science was pretty basic (mostly linear extrapolation), but it was my first macro written in VBA and working with a CAD API is never easy, no matter what application you're working with. Our presentation at ASME IDETC even got some attention from Jon Hirschtick.</p>
+    <img class="prj" src="assets/images/projects/PatternTool.png" alt="Screenshot of CAD Journal in NX.">
+
+    <h2>Digital Twin Informatics for Additive Manufacturing <a href="https://github.com/jmorris335/DesignInformatics">Link</a></h2>
+    <p class="prj">Most of my work is with the modeling side of digital twins, but this project allowed me to see the data streams that also contribute to their efficacy. This project implemented a PHP server communicating with a MySQL db that attached to several mock representations of industrial additive manufacturing machines. Data from various sensors on the machines were processed and communicated via the web interface shown below.</p>
+    <img class="prj" src="assets/images/projects/AMDTinterface.png" alt="Screenshot of Web Interface of 3D Printing Hub.">
+
+    <h2>STL Slicer <a href="https://github.com/jmorris335/DesAuto_Project">Link</a></h2>
+    <p class="prj">This was a semester project for graduate class in Design Automation taught by Dr. Cameron Turner. Though this Python package has some bugs (for instance, it uses hard-linking to drive the MatplotLib animations in the Tkinter interface, plus it's slow), it still features robust manipulation and slicing of STL objects including orthographic representations, snap to floor, scaling, wireframe/shaded views, slicing with wall thicknesses, and layer height cross sections.
+    <img class="prj" src="assets/images/projects/Slicer.png" alt="Image of Slicer application.">
+
+    <h2>Digital Twin of Tracked Vehicle <a href="https://github.com/jmorris335/Diff-Drive-Digital-Twin-PY">Link</a></h2>
+    <p class="prj">I led an undergraduate research group while getting my doctorate that was making a digital twin of a robotic, tracked vehicle. I made up this short simulation that tracked voltage inputs to the motors and outputted planar motion, torque, and other parameters. This digital twin was our first exposure to the truth that models are only as good as they are connected, and that all of our integrations were generally hard-wired rather than flexible.</p>
+    <img class="prj" src="assets/images/projects/Tank_sim.gif" alt="GIF of planar differential drive motion.">
+
+    <h2>Sensor Optimization for Robotic Pathfinding <a href="https://github.com/jmorris335/Opt_Group_Project">Link</a></h2>
+    <p class="prj">A robust MATLAB module (with nice documentation) showing how the sensors on a robot can be optimized for a given environment. Implements a genetic algorithm that uses an A* pathfinding sequence to find a family of routes based on a given generation of sensors. 
+    <img class="prj" src="assets/images/projects/Pathfinding.gif" alt="GIF of pathfinding application.">
+
+    <h2>Agent-Based Model of Traffic Flow through Civic Center <a href="https://github.com/jmorris335/Provo_Rec_Center">Link</a></h2>
+    <p class="prj">This simulation was conducted in cooperation with the civic and recreation center in Provo, Utah, to help them understand traffic flow through their facility and espeically the front lobby space. It was used by the center in determining staffing effects and the potential of installing kiosks. This was coupled with a Discrete Event Simulation (DES) using the SimPy library. I'm still working on getting the code up on GitHub for that.</p>
+    <img class="prj" src="assets/images/projects/PRC_ABM.png" alt="Image of agent-based modeling simulation.">
+</ul>
+    <div class="qlnk">
+        <ul class="qlnk">
+            <li class="qlnk"><a class="qlnk" href="https://www.linkedin.com/in/john-h-morris/"> LinkedIn </a></li>
+            <li class="qlnk"><a class="qlnk" href="https://orcid.org/0009-0005-6571-1959"> ORCID </a></li>
+            <li class="qlnk"><a class="qlnk" href="https://scholar.google.com/citations?user=NwXJsPcAAAAJ&hl=en"> Google Scholar </a></li>
+            <li class="qlnk"><a class="qlnk" href="https://github.com/jmorris335"> GitHub </a></li>
+        </ul>
+    </div>
+    </main>
+</body>
+</html>
