@@ -188,6 +188,11 @@ p.sub {
     font-family: Helvetica, sans-serif;
     font-size: 10pt;
 }
+.inline-icon {
+    height: 20px;
+    vertical-align: middle;
+    padding-bottom: 4px;
+}
 img.prj {
     height: 225px;
     display: block;
